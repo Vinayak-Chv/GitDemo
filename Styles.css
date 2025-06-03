@@ -18,16 +18,15 @@ body {
 }
 
 header {
-    left: 0;
-    width: 100%;
+    margin: 15px 30px;
+    top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    align-items: center; 
+    padding: 12px 22px;
     z-index: 1000;
     background-color: black;
-    border: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
 }
@@ -81,7 +80,7 @@ nav ul li a:hover::after {
 }
 
 section {
-    padding: 10rem 10%;
+    padding: 7rem 10%;
 }
 
 /* Home Section */
@@ -89,17 +88,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 80vh;
 }
 
 .home .left_home {
-    flex: 1;
     max-width: 50%;
 }
 
 .right_home {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,20 +102,26 @@ section {
 
 .right_home img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     border-radius: 50%;
     box-shadow: 0 0 30px black;
-    transition: transform 0.3s ease;
+    transition: all 0.5s ease;
+}
+
+.right_home img:hover {
+    transform: translateY(-20px);
+    box-shadow: 20px 20px 20px black;
 }
 
 .home .left_home h5,
 .home .left_home h1,
 .home .left_home p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .home .left_home h5 {
     color: white;
+    font-size: 0.9rem;
 }
 
 .home .left_home h5 span {
@@ -129,6 +130,13 @@ section {
 
 .home .left_home h1 span {
     color: cyan;
+    font-size: 2rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: cyan; }
 }
 
 .socialIcons {
@@ -142,11 +150,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     background-color: transparent;
     border: 2px solid cyan;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     border-radius: 50%;
     transition: all 0.3s ease;
     color: cyan;
@@ -162,11 +170,10 @@ section {
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
-    background-color: transparent;
+    padding: 0.5rem 2rem;
     border: 2px solid cyan;
     border-radius: 50px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: cyan;
     text-decoration: none;
     font-weight: 600;
@@ -176,11 +183,6 @@ section {
     margin-left: 0;
 }
 
-.home .left_home p {
-    display: inline-block;
-    margin-right: 1rem;
-}
-
 .btn:hover {
     background-color: cyan;
     color: black;
@@ -188,32 +190,36 @@ section {
     transform: translateY(-5px);
 }
 
+.home .left_home p {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
 /* About Section */
 .about {
     display: flex;
-    border: 7px solid black;
-    margin: 50px;
+    border: 5px solid black;
+    margin: 80px 100px;
     background-color: #1c1c1c;
 }
 
 .about .left_about img{
-    height: 39rem;
-    width: 23rem;
+    height: 29rem;
+    width: 18rem;
     border: 5px solid black;
     border-radius: 20px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .about .right_about h1{
     color: cyan;
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 15px;
 }
 
 .about .right_about p{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 /* Qualification Section */
@@ -239,16 +245,18 @@ section {
 }
 
 .qualification .left_qualification .qualification-item{
-    border: 1px solid transparent;
     margin: 20px 20px;
     padding: 30px;
     border-radius: 10px;
     background-color: #252525;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .qualification .left_qualification .qualification-item:hover {
     box-shadow: 0 0 20px #00adb5;
+    transform: translateY(-10px);
 }
 
 .qualification .left_qualification .qualification-item h3 {
@@ -273,7 +281,7 @@ section {
 .qualification .right_qualification .courseLink a {
     text-decoration: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .courseLink {
@@ -292,6 +300,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 10rem;
+    padding: 10rem;
 }
 
 .left_contact p{
@@ -313,12 +322,12 @@ section {
 .right_contact textarea {
     padding: 1rem;
     border: 2px solid cyan;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: transparent;
     color: #f0f0f0;
     font-size: 1.3rem;
     resize: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.5s ease;
     background-color: #1c1c1c;
     margin: 5px 0;
     width: 25rem;
@@ -339,14 +348,12 @@ section {
     background-color: transparent;
     border: 2px solid cyan;
     border-radius: 50px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: cyan;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin-top: 0;
-    margin-left: 0;
     margin-bottom: 4.5rem;
 }
 
@@ -355,4 +362,60 @@ section {
     color: black;
     box-shadow: 0 0 15px cyan;
     transform: translateY(-5px);
+}
+
+/* Responsive for the Mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home, .about, .qualification, .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left_about, .right_about, .left_home, .right_home, .left_contact, .right_contact {
+        width: 100%;
+    }
+
+    .right_home img, .left_about img {
+        max-width: 80%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    h1, h2, h3, p {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsive for the Tablets */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn, .btn1 {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .socialIcons {
+        justify-content: center;
+    }
 }
